@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaterVision</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #071012;
+
+            --bg-light: #0c1b1f;
+
+            --aqua-primary: #00c2d1;
+
+            --aqua-light: #6af0ff;
+
+            --text-light: #e5e5e5;
+            --text-muted: #a8b8b9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: var(--text-light);
+            background-color: var(--bg-dark);
+            overflow-x: hidden;
+        }
+
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(7, 16, 18, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 3rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 194, 209, 0.2);
+            animation: slideInDown 0.6s ease forwards;
+
+        }
+
+        header h1 {
+            color: var(--aqua-primary);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--aqua-light);
+        }
+
+        .esconder-cabecalho {
+            display: none;
+        }
+
+        header.hide {
+            animation: slideOutUp 0.6s ease forwards;
+        }
+
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-light);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(45%) contrast(110%) saturate(130%);
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--aqua-light);
+            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: var(--text-light);
+            opacity: 0.9;
+            text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+            animation: fadeInUp 2s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .stats {
+            background-color: var(--bg-light);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .stats h3 {
+            font-size: 1.8rem;
+            color: var(--aqua-primary);
+            margin-bottom: 40px;
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px 50px;
+            border-radius: 16px;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+            border: 1px solid rgba(0, 242, 255, 0.15);
+            transition: all 0.3s;
+            max-width: 350px;
+        }
+
+        .stat:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.25);
+        }
+
+        .stat h4 {
+            color: var(--aqua-light);
+            font-size: 2rem;
+        }
+
+        .stat p {
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: invert(100%);
+        }
+
+
+        .about {
+            padding: 100px 10%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            background: linear-gradient(180deg, var(--bg-dark), var(--bg-light));
+        }
+
+        .about img {
+            width: 45%;
+            border-radius: 16px;
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h2 {
+            color: var(--aqua-primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+
+        footer {
+            background-color: #000;
+            color: var(--aqua-light);
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(0, 242, 255, 0.2);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        #logo {
+            width: 120px;
+            height: 70px;
+            margin-left: 60px;
+        }
+
+        @keyframes slideOutUp {
+            from {
+                transform: translateY(0);
+                /* Posição inicial: no lugar */
+                opacity: 1;
+            }
+
+            to {
+                transform: translateY(-100%);
+                /* Posição final: movido 100% para cima */
+                opacity: 0;
+                /* Opcional: fade out */
+            }
+        }
+
+        /* Define a animação de entrada (para quando ele reaparecer) */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>WaterVision</h1>
+        <img src="docs/logo.png" id="logo">
+        <nav>
+            <a href="#home">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#impact">Impacto</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline>
+            <source src="" type="video/mp4">
+            Seu navegador não suporta vídeos em HTML5.
+        </video>
+
+        <h2>Um futuro mais limpo começa na água.</h2>
+        <p>Monitoramento inteligente e sustentável para um planeta mais saudável.</p>
+    </section>
+
+    <section class="stats" id="impact">
+        <h3>Nosso impacto e inovações</h3>
+
+        <div id="statsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="container d-flex justify-content-center flex-wrap gap-4">
+                        <div class="stat">
+                            <h4>+120K</h4>
+                            <p>Litros de água simulados e analisados por sensores.</p>
+                        </div>
+                        <div class="stat">
+                            <h4>+95%</h4>
+                            <p>Precisão esperada nas medições de pH, oxigênio e turbidez.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container d-flex justify-content-center flex-wrap gap-4">
+                        <div class="stat">
+                            <h4>IoT + Indústria 4.0</h4>
+                            <p>Integração entre sensores inteligentes e análise em tempo real.</p>
+                        </div>
+                        <div class="stat">
+                            <h4>Alerta Preventivo</h4>
+                            <p>Monitoramento do nível da água para reduzir riscos de enchentes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="container d-flex justify-content-center flex-wrap gap-4">
+                        <div class="stat">
+                            <h4>Sustentabilidade</h4>
+                            <p>União entre tecnologia e ecologia para cuidar do Rio Gravataí.</p>
+                        </div>
+                        <div class="stat">
+                            <h4>Educação & Inovação</h4>
+                            <p>Projeto desenvolvido por estudantes de Gravataí/RS do ensino técnico.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#statsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#statsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <img src="https://media.gazetadopovo.com.br/2017/06/b92b0ee5d98d176b335b126f70a0fcc0-gpLarge.jpeg"
+            alt="Equipe WaterVision">
+        <div class="about-text">
+            <h2>Sobre a WaterVision</h2>
+            <p>
+                A WaterVision é uma startup estudantil desenvolvida por alunos da Escola SESI Gravataí Albino Marques
+                Gomes, com o propósito de unir tecnologia, sustentabilidade e inovação em prol do meio ambiente.
+                Nosso protótipo utiliza conceitos da Internet das Coisas (IoT) e da Indústria 4.0 para monitorar em
+                tempo real a qualidade e o nível da água do Rio Gravataí, promovendo ações de prevenção de enchentes e
+                redução da poluição ambiental.
+                O projeto representa o compromisso dos estudantes com um futuro mais sustentável, onde a tecnologia atua
+                como aliada da ecologia e da comunidade local.
+            </p>
+        </div>
+    </section>
+
+
+    <footer id="contact">
+        <p>© 2025 WaterVision | Thiago Carlesso, Tiago Magalhães</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+
+
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                header.classList.add('hide');
+            }
+
+            else {
+                header.classList.remove('hide');
+            }
+
+            lastScrollTop = currentScroll;
+        });
+    });
+</script>
+
+</html>
