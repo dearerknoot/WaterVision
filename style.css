@@ -213,6 +213,11 @@
             height: 70px;
             margin-left: -130px;
         }
+        @media (max-width: 768px) {
+    #logo  {
+    visibility: hidden;
+  }
+}
 
         @keyframes slideOutUp {
             from {
