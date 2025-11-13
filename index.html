@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="timelineStyle.css">
 </head>
 
+
 <body>
 
     <header>
@@ -27,6 +28,8 @@
                     <li><a class="dropdown-item" href="#home">Inicio</a></li>
                     <li><a class="dropdown-item" href="#about">Sobre</a></li>
                     <li><a class="dropdown-item" href="#impact">Impacto</a></li>
+                    <li><a class="dropdown-item" href="#objetivo">Objetivo</a></li>
+                    <li><a class="dropdown-item" href="#mapa">Área de atuação</a></li>
                     <li><a class="dropdown-item" href="#timeline">Linha do Tempo</a></li>
                     <li><a class="dropdown-item" href="#contact">Contato</a></li>
                 </ul>
@@ -47,31 +50,33 @@
     <section class="stats" id="impact">
         <h3>Nosso impacto e inovações</h3>
 
-        <div id="statsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div id="statsCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4200">
             <div class="carousel-inner">
 
+                <!-- ITEM 1 -->
                 <div class="carousel-item active">
                     <div class="container d-flex justify-content-center flex-wrap gap-4">
                         <div class="stat">
-                            <h4></h4>
-                            <p></p>
+                            <h4>Monitoramento Contínuo</h4>
+                            <p>Coleta automática de dados ambientais do Rio Gravataí 24h por dia.</p>
                         </div>
                         <div class="stat">
                             <h4>+95%</h4>
-                            <p>Precisão esperada nas medições de pH, oxigênio e turbidez.</p>
+                            <p>Precisão estimada nas leituras de pH, turbidez e oxigênio dissolvido.</p>
                         </div>
                     </div>
                 </div>
+
 
                 <div class="carousel-item">
                     <div class="container d-flex justify-content-center flex-wrap gap-4">
                         <div class="stat">
                             <h4>IoT + Indústria 4.0</h4>
-                            <p>Integração entre sensores inteligentes e análise em tempo real.</p>
+                            <p>Sensores conectados enviam dados em tempo real para análise integrada.</p>
                         </div>
                         <div class="stat">
-                            <h4>Alerta Preventivo</h4>
-                            <p>Monitoramento do nível da água para reduzir riscos de enchentes.</p>
+                            <h4>Alertas Inteligentes</h4>
+                            <p>Sistema de aviso antecipado para identificar risco de enchentes ou contaminação.</p>
                         </div>
                     </div>
                 </div>
@@ -80,11 +85,11 @@
                     <div class="container d-flex justify-content-center flex-wrap gap-4">
                         <div class="stat">
                             <h4>Sustentabilidade</h4>
-                            <p>União entre tecnologia e ecologia para cuidar do Rio Gravataí.</p>
+                            <p>Tecnologia aplicada para reduzir impactos ambientais e proteger a bacia hidrográfica.</p>
                         </div>
                         <div class="stat">
-                            <h4>Educação & Inovação</h4>
-                            <p>Projeto desenvolvido por estudantes de Gravataí/RS do ensino técnico.</p>
+                            <h4>Inovação Estudantil</h4>
+                            <p>Projeto desenvolvido por alunos de Gravataí/RS com foco em soluções reais.</p>
                         </div>
                     </div>
                 </div>
@@ -102,6 +107,60 @@
         </div>
     </section>
 
+    <section class="objetivo-dark" id="objetivo">
+        <div class="objetivo-wrapper">
+            <h2>Objetivo da WaterVision</h2>
+
+            <p>
+                O projeto <strong>WaterVision</strong> nasce da necessidade urgente de apoiar a comunidade local
+                após os recentes desastres causados pelas enchentes no Rio Grande do Sul. A informação confiável
+                se tornou essencial para proteger vidas e permitir tomadas de decisão mais rápidas e seguras.
+            </p>
+
+            <p class="pergunta">
+                Antes do WaterVision, <em>como era feita essa coleta de dados?</em>
+            </p>
+
+            <p>
+                Grande parte dessas medições era realizada de forma manual, lenta e com baixa precisão — o que
+                dificultava respostas eficientes em situações críticas.
+            </p>
+
+            <p>
+                O WaterVision integra <strong>tecnologia, inovação e sustentabilidade</strong> para transformar
+                a forma como analisamos o meio ambiente. Com sensores inteligentes e monitoramento em tempo real,
+                o projeto se torna uma ferramenta essencial para prevenção, educação ambiental e segurança da população.
+            </p>
+
+            <p>
+                O objetivo é utilizar a tecnologia como aliada da comunidade, oferecendo um sistema moderno que
+                ajuda a entender e proteger melhor os rios e seus impactos na vida das pessoas.
+            </p>
+        </div>
+    </section>
+
+    <section class="map-section" id="mapa">
+        <div class="map-content container">
+            <div class="map-text">
+                <h2>Local de Monitoramento</h2>
+                <p>
+                    O WaterVision realiza análises diretamente na região do Rio Gravataí, permitindo o monitoramento do
+                    nível da água, qualidade e indicadores ambientais em tempo real.
+                </p>
+                <p>
+                    A área destacada abaixo representa um dos principais pontos de estudo utilizados pelos sensores do
+                    protótipo.
+                </p>
+            </div>
+
+            <div class="map-frame">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3456.7872268115234!2d-51.01259935625248!3d-29.956798242069883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1763075347186!5m2!1spt-BR!2sbr"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
 
     <section class="about" id="about">
         <img src="https://media.gazetadopovo.com.br/2017/06/b92b0ee5d98d176b335b126f70a0fcc0-gpLarge.jpeg"
@@ -109,65 +168,97 @@
         <div class="about-text">
             <h2>Sobre a WaterVision</h2>
             <p>
-                A WaterVision é uma startup estudantil desenvolvida por alunos da Escola SESI Gravataí Albino Marques
-                Gomes, com o propósito de unir tecnologia, sustentabilidade e inovação em prol do meio ambiente.
-                Nosso protótipo utiliza conceitos da Internet das Coisas (IoT) e da Indústria 4.0 para monitorar em
-                tempo real a qualidade e o nível da água do Rio Gravataí, promovendo ações de prevenção de enchentes e
-                redução da poluição ambiental.
-                O projeto representa o compromisso dos estudantes com um futuro mais sustentável, onde a tecnologia atua
-                como aliada da ecologia e da comunidade local.
+                A WaterVision é uma startup estudantil criada por alunos da Escola SESI Gravataí Albino Marques Gomes,
+                dedicada a aplicar tecnologia de forma responsável para melhorar a relação da comunidade com o meio
+                ambiente. O projeto desenvolve um protótipo baseado em Internet das Coisas (IoT) para acompanhar, em
+                tempo real, a qualidade e o nível da água do Rio Gravataí. Essa abordagem permite identificar alterações
+                importantes no rio e oferece suporte a ações preventivas, contribuindo para a segurança local e para a
+                preservação dos recursos hídricos.
             </p>
         </div>
     </section>
+
+
     <section id="timeline">
         <div class="wrapper">
+
             <section class="block">
                 <div class="each-year">
-                    <div class="title">2016</div>
+                    <div class="title">Início</div>
+
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam molestiae sint ut sit sed
-                            impedit, minus, eligendi modi.
+                            Definição do problema principal: monitoramento inteligente da qualidade da água e coleta de
+                            dados ambientais.
                         </div>
                     </div>
 
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
-                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
-                            nulla magnam error eligendi? Quos!
+                            Levantamento de requisitos básicos e discussão sobre a viabilidade técnica e financeira do
+                            projeto.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Estruturação das Ideias</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Organização das ideias iniciais do WaterVision e definição de objetivos específicos do
+                            sistema.
                         </div>
                     </div>
 
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
-                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
-                            nulla magnam error eligendi? Quos!
+                            Desenvolvimento do conceito do dispositivo, sensores e plataforma de acompanhamento de
+                            dados.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Protótipos</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Criação dos primeiros protótipos utilizando Arduino para testes iniciais de sensores.
                         </div>
                     </div>
 
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
-                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
-                            nulla magnam error eligendi? Quos!
+                            Migração para ESP32 com destaque para esta etapa:<br>
+                            <strong>→ Aqui estamos! Testando comunicação, conectividade Wi-Fi e leitura otimizada de
+                                dados.</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Manipulação de Dados</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Tratamento dos dados coletados pelos sensores, definição de padrões, limites e filtragem.
                         </div>
                     </div>
 
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
-                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
-                            nulla magnam error eligendi? Quos!
-                        </div>
-                    </div>
-
-                    <div class="each-event">
-                        <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
-                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
-                            nulla magnam error eligendi? Quos!
+                            Desenvolvimento de scripts para organizar, validar e enviar dados para o servidor.
                         </div>
                     </div>
                 </div>
@@ -175,20 +266,75 @@
 
             <section class="block">
                 <div class="each-year">
-                    <div class="title">2015</div>
+                    <div class="title">Banco de Dados</div>
+
                     <div class="each-event">
                         <div class="event-description">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Criação do banco de dados responsável por armazenar leituras de sensores, histórico e
+                            alertas.
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Desenvolvimento da API para comunicação entre o ESP32 e o servidor.
                         </div>
                     </div>
                 </div>
             </section>
+
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Interface & Dashboard</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Design da interface gráfica do app/site para exibir gráficos, alertas e dados em tempo real.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Testes Finais</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Testes de campo com sensores submersos, análise da precisão e ajustes de firmware.
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Correção de falhas, otimizações e validação do funcionamento geral.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">Apresentação</div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Montagem dos materiais finais: pôster, vídeo, relatório e demonstração prática do
+                            WaterVision.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
     </section>
 
 
+
+
     <footer id="contact">
-        <p>© 2025 WaterVision | Thiago Carlesso, Tiago Magalhães</p>
+        <p>© 2025 WaterVision | Thiago Carlesso, Tiago Magalhães | tel: +55 (51)997652615</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -216,5 +362,6 @@
     });
 </script>
 <script src="timelineScript.js"></script>
+
 
 </html>
