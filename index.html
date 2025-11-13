@@ -5,254 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WaterVision</title>
+    <link rel="icon" href="docs/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        :root {
-            --bg-dark: #071012;
-
-            --bg-light: #0c1b1f;
-
-            --aqua-primary: #00c2d1;
-
-            --aqua-light: #6af0ff;
-
-            --text-light: #e5e5e5;
-            --text-muted: #a8b8b9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            color: var(--text-light);
-            background-color: var(--bg-dark);
-            overflow-x: hidden;
-        }
-
-
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(7, 16, 18, 0.95);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 3rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 194, 209, 0.2);
-            animation: slideInDown 0.6s ease forwards;
-
-        }
-
-        header h1 {
-            color: var(--aqua-primary);
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--aqua-light);
-        }
-
-        .esconder-cabecalho {
-            display: none;
-        }
-
-        header.hide {
-            animation: slideOutUp 0.6s ease forwards;
-        }
-
-        .hero {
-            height: 100vh;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-light);
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .hero video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            filter: brightness(45%) contrast(110%) saturate(130%);
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--aqua-light);
-            text-shadow: 0 0 15px rgba(0, 242, 255, 0.4);
-            animation: fadeInUp 1.5s ease;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-top: 10px;
-            color: var(--text-light);
-            opacity: 0.9;
-            text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-            animation: fadeInUp 2s ease;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-        .stats {
-            background-color: var(--bg-light);
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .stats h3 {
-            font-size: 1.8rem;
-            color: var(--aqua-primary);
-            margin-bottom: 40px;
-        }
-
-        .stat {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 25px 50px;
-            border-radius: 16px;
-            box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
-            border: 1px solid rgba(0, 242, 255, 0.15);
-            transition: all 0.3s;
-            max-width: 350px;
-        }
-
-        .stat:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.25);
-        }
-
-        .stat h4 {
-            color: var(--aqua-light);
-            font-size: 2rem;
-        }
-
-        .stat p {
-            color: var(--text-muted);
-            margin-top: 10px;
-        }
-
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            filter: invert(100%);
-        }
-
-
-        .about {
-            padding: 100px 10%;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            background: linear-gradient(180deg, var(--bg-dark), var(--bg-light));
-        }
-
-        .about img {
-            width: 45%;
-            border-radius: 16px;
-            box-shadow: 0 0 25px rgba(0, 242, 255, 0.2);
-            border: 1px solid rgba(0, 242, 255, 0.1);
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text h2 {
-            color: var(--aqua-primary);
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
-
-        .about-text p {
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-
-        footer {
-            background-color: #000;
-            color: var(--aqua-light);
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(0, 242, 255, 0.2);
-        }
-
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        #logo {
-            width: 120px;
-            height: 70px;
-            margin-left: 60px;
-        }
-
-        @keyframes slideOutUp {
-            from {
-                transform: translateY(0);
-                /* Posição inicial: no lugar */
-                opacity: 1;
-            }
-
-            to {
-                transform: translateY(-100%);
-                /* Posição final: movido 100% para cima */
-                opacity: 0;
-                /* Opcional: fade out */
-            }
-        }
-
-        /* Define a animação de entrada (para quando ele reaparecer) */
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timelineStyle.css">
 </head>
 
 <body>
@@ -261,16 +18,25 @@
         <h1>WaterVision</h1>
         <img src="docs/logo.png" id="logo">
         <nav>
-            <a href="#home">Início</a>
-            <a href="#about">Sobre</a>
-            <a href="#impact">Impacto</a>
-            <a href="#contact">Contato</a>
+            <div class="dropdown">
+                <button class="btn btn-outline-info" dropdown-toggle type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Navegação
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#home">Inicio</a></li>
+                    <li><a class="dropdown-item" href="#about">Sobre</a></li>
+                    <li><a class="dropdown-item" href="#impact">Impacto</a></li>
+                    <li><a class="dropdown-item" href="#timeline">Linha do Tempo</a></li>
+                    <li><a class="dropdown-item" href="#contact">Contato</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <section class="hero" id="home">
         <video autoplay muted loop playsinline>
-            <source src="" type="video/mp4">
+            <source src="docs/drone.mp4" type="video/mp4">
             Seu navegador não suporta vídeos em HTML5.
         </video>
 
@@ -287,8 +53,8 @@
                 <div class="carousel-item active">
                     <div class="container d-flex justify-content-center flex-wrap gap-4">
                         <div class="stat">
-                            <h4>+120K</h4>
-                            <p>Litros de água simulados e analisados por sensores.</p>
+                            <h4></h4>
+                            <p></p>
                         </div>
                         <div class="stat">
                             <h4>+95%</h4>
@@ -353,6 +119,72 @@
             </p>
         </div>
     </section>
+    <section id="timeline">
+        <div class="wrapper">
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">2016</div>
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam molestiae sint ut sit sed
+                            impedit, minus, eligendi modi.
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
+                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
+                            nulla magnam error eligendi? Quos!
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
+                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
+                            nulla magnam error eligendi? Quos!
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
+                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
+                            nulla magnam error eligendi? Quos!
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
+                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
+                            nulla magnam error eligendi? Quos!
+                        </div>
+                    </div>
+
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, vitae, ex voluptates
+                            repudiandae molestias modi veniam cumque, iusto qui quia illum ipsa laborum adipisci porro
+                            nulla magnam error eligendi? Quos!
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block">
+                <div class="each-year">
+                    <div class="title">2015</div>
+                    <div class="each-event">
+                        <div class="event-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
 
 
     <footer id="contact">
@@ -383,5 +215,6 @@
         });
     });
 </script>
+<script src="timelineScript.js"></script>
 
 </html>
