@@ -282,6 +282,92 @@
          }
      }
 
+     /* ====== Seção de Contato ====== */
+     .contact-section {
+         padding: 60px 20px;
+         text-align: center;
+         background: #0b1c21;
+         color: #e0f7fa;
+         font-family: "Poppins", sans-serif;
+     }
+
+     .contact-section h2 {
+         font-size: 2.4rem;
+         margin-bottom: 10px;
+         color: #00e5ff;
+         text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+     }
+
+     .contact-section p {
+         font-size: 1rem;
+         opacity: 0.8;
+         margin-bottom: 40px;
+     }
+
+     /* ====== Formulário ====== */
+     .contact-form {
+         max-width: 600px;
+         margin: auto;
+         background: rgba(13, 40, 48, 0.8);
+         padding: 30px;
+         border-radius: 12px;
+         border: 1px solid rgba(0, 229, 255, 0.2);
+         box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+         backdrop-filter: blur(6px);
+     }
+
+     /* ====== Grupo ====== */
+     .form-group {
+         margin-bottom: 20px;
+         text-align: left;
+     }
+
+     .form-group label {
+         display: block;
+         margin-bottom: 6px;
+         color: #80deea;
+         font-weight: 500;
+     }
+
+     /* Campos */
+     .contact-form input,
+     .contact-form textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid rgba(0, 229, 255, 0.15);
+         border-radius: 8px;
+         background: rgba(255, 255, 255, 0.05);
+         color: #e0f7fa;
+         outline: none;
+         transition: 0.3s ease;
+         font-family: "Poppins", sans-serif;
+     }
+
+     .contact-form input:focus,
+     .contact-form textarea:focus {
+         border-color: #00e5ff;
+         box-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+         background: rgba(255, 255, 255, 0.1);
+     }
+
+     /* ====== Botão ====== */
+     .btn-enviar {
+         width: 100%;
+         padding: 14px;
+         background: linear-gradient(90deg, #0097a7, #00e5ff);
+         color: #001218;
+         font-weight: 700;
+         border: none;
+         border-radius: 10px;
+         cursor: pointer;
+         transition: 0.3s ease-in-out;
+         text-transform: uppercase;
+     }
+
+     .btn-enviar:hover {
+         transform: scale(1.05);
+         box-shadow: 0 0 18px rgba(0, 229, 255, 0.6);
+     }
 
      .stats {
          background-color: var(--bg-dark);
